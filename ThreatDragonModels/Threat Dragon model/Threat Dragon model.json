@@ -44,12 +44,12 @@
           },
           {
             "position": {
-              "x": 747.9999999999982,
-              "y": 180.0000000000058
+              "x": 907.9999999999977,
+              "y": 200.00000000000455
             },
             "size": {
-              "width": 840,
-              "height": 710
+              "width": 680,
+              "height": 690
             },
             "shape": "trust-boundary-box",
             "attrs": {
@@ -62,7 +62,7 @@
             "data": {
               "type": "tm.BoundaryBox",
               "name": "AWS VPC",
-              "description": "",
+              "description": "Security group firewall protected",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             }
@@ -270,45 +270,6 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "336300c3-f311-4d6f-bb1e-61d6f5c03d90",
-            "source": {
-              "cell": "08fecba4-0ba6-401c-b2b2-b1861f49be5e"
-            },
-            "target": {
-              "cell": "a2191ad6-3ea4-4dcf-b9de-7f1702a08055"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
                   "name": "block"
                 },
                 "strokeDasharray": null
@@ -342,55 +303,6 @@
               {
                 "x": 1030,
                 "y": 449.99999999999955
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "2a4fce5f-fd9f-43f8-9e3c-ecfd3e12161e",
-            "source": {
-              "cell": "d3971433-2b11-4add-9131-0fc9a6ca10cd"
-            },
-            "target": {
-              "cell": "692b3770-3f62-4426-a741-429aa69a1182"
-            },
-            "vertices": [
-              {
-                "x": 690,
-                "y": 930
-              },
-              {
-                "x": 580,
-                "y": 790
               }
             ]
           },
@@ -566,49 +478,6 @@
             ],
             "labels": [
               "Web Response (HTTPS)"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTP",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "HTTP",
-              "threats": []
-            },
-            "id": "f0fea406-92f3-4f66-8567-da674fd3fe34",
-            "source": {
-              "cell": "a2191ad6-3ea4-4dcf-b9de-7f1702a08055"
-            },
-            "target": {
-              "cell": "d1f98ca3-417a-4039-bcf3-2d2f956de832"
-            },
-            "vertices": [],
-            "labels": [
-              "HTTP"
             ]
           },
           {
@@ -843,8 +712,148 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": true,
+              "reasonOutOfScope": "Internal AWS communication",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "336300c3-f311-4d6f-bb1e-61d6f5c03d90",
+            "source": {
+              "cell": "08fecba4-0ba6-401c-b2b2-b1861f49be5e"
+            },
+            "target": {
+              "cell": "a2191ad6-3ea4-4dcf-b9de-7f1702a08055"
+            },
+            "vertices": [
+              {
+                "x": 822,
+                "y": 460
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTP",
+              "description": "",
+              "outOfScope": true,
+              "reasonOutOfScope": "Internal AWS communication",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "HTTP",
+              "threats": []
+            },
+            "id": "f0fea406-92f3-4f66-8567-da674fd3fe34",
+            "source": {
+              "cell": "a2191ad6-3ea4-4dcf-b9de-7f1702a08055"
+            },
+            "target": {
+              "cell": "d1f98ca3-417a-4039-bcf3-2d2f956de832"
+            },
+            "vertices": [],
+            "labels": [
+              "HTTP"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SMTP",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "SMTP",
+              "threats": []
+            },
+            "id": "2a4fce5f-fd9f-43f8-9e3c-ecfd3e12161e",
+            "source": {
+              "cell": "d3971433-2b11-4add-9131-0fc9a6ca10cd"
+            },
+            "target": {
+              "cell": "692b3770-3f62-4426-a741-429aa69a1182"
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 860
+              },
+              {
+                "x": 580,
+                "y": 790
+              }
+            ],
+            "labels": [
+              "SMTP"
+            ]
+          },
+          {
             "position": {
-              "x": 820,
+              "x": 762,
               "y": 369.99999999999955
             },
             "size": {
@@ -1045,8 +1054,8 @@
           },
           {
             "position": {
-              "x": 920,
-              "y": 980
+              "x": 750,
+              "y": 890.0000000000045
             },
             "size": {
               "width": 110,
